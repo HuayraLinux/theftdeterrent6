@@ -1,0 +1,15 @@
+Source: theftdeterrentclient-lib
+Section: non-free/utils
+Priority: extra
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.6
+
+Package: theftdeterrentclient-lib
+Depends:  ${shlibs:Depends}, ${misc:Depends}
+Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon
+Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon
+Priority: extra
+Section: non-free/utils
+Architecture: amd64
+Description: Theft Deterrent Plus client library Huayra package
