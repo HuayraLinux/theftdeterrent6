@@ -1,3 +1,9 @@
+theftdeterrentguardian (6.0.0.11.huayra2) unstable; urgency=medium
+
+  * fix preinst 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Fri, 12 Mar 2021 15:59:23 -0300
+
 theftdeterrentguardian (6.0.0.11.huayra1) unstable; urgency=medium
 
   * repack de theftdeterrent6 (guardian)

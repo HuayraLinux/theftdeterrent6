@@ -1,3 +1,9 @@
+theftdeterrent (6.0.0.11.huayra3) unstable; urgency=medium
+
+  * ajustando paths de funciones 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Fri, 12 Mar 2021 15:47:16 -0300
+
 theftdeterrent (6.0.0.11.huayra2) unstable; urgency=medium
 
   * revert del path de scripts 
