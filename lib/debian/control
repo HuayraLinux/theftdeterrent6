@@ -7,8 +7,8 @@ Standards-Version: 3.9.6
 
 Package: theftdeterrentclient-lib
 Depends:  ${shlibs:Depends}, ${misc:Depends}
-Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon
-Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon
+Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentclient (<= 6), theftdeterrentclient-lib (<= 6)
+Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentclient (<= 6), theftdeterrentclient-lib (<= 6)
 Priority: extra
 Section: non-free/utils
 Architecture: amd64

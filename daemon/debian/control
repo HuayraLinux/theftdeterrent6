@@ -6,8 +6,7 @@ Build-Depends: debhelper (>= 9.0.0)
 Standards-Version: 3.9.6
 
 Package: theftdeterrentdaemon
-Pre-depends:theftdeterrentclient-lib
-Depends:  ${shlibs:Depends}, ${misc:Depends}
+Depends:  ${shlibs:Depends}, ${misc:Depends}, theftdeterrentclient-lib (>= 6)
 Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6)
 Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6)
 Section: non-free/utils

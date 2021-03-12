@@ -1,3 +1,9 @@
+theftdeterrentclient-lib (6.0.0.11.huayra2) unstable; urgency=medium
+
+  * fix depends 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Fri, 12 Mar 2021 19:05:51 -0300
+
 theftdeterrentclient-lib (6.0.0.11.huayra1) unstable; urgency=medium
 
   * repack del theftdeterrent6

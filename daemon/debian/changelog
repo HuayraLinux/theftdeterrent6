@@ -1,3 +1,15 @@
+theftdeterrentdaemon (6.0.0.11.huayra3) unstable; urgency=medium
+
+  * fix depends
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Fri, 12 Mar 2021 16:23:24 -0300
+
+theftdeterrentdaemon (6.0.0.11.huayra2) unstable; urgency=medium
+
+  * fix preinst
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Fri, 12 Mar 2021 16:10:42 -0300
+
 theftdeterrentdaemon (6.0.0.11.huayra1) unstable; urgency=medium
 
   * repack de theftdeterrent6
