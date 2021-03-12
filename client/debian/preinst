@@ -1,21 +1,3 @@
 #! /bin/sh
 
-trap 'exit 1' 1 2 15
-
-export curdir="/usr/share/theftdeterrentclient"
-export predir=""
-
-. ${curdir}/${predir}funcdefine
-
-fn_define
-
-. ${curdir}/${predir}funcutil
-
-fn_syssetlang
-fn_syscreatelogdir
-fn_syscreateinstdir
-fn_sysExitTrap
-
-echo "Install ..." >> ${td_log_dir}/${td_log_file}
-
 exit 0
