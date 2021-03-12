@@ -13,3 +13,4 @@ Priority: extra
 Section: non-free/utils
 Architecture: amd64
 Description: Theft Deterrent Plus client library Huayra package
+ Paquete con las librerias de TheftDeterrent v6
