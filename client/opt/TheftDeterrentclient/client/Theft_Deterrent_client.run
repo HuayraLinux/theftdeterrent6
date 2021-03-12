@@ -1,0 +1,8 @@
+#! /bin/sh
+
+apppath=/opt/TheftDeterrentclient/client
+appfile=TheftDeterrentclient
+
+#chmod +x ${apppath}/${appfile} > /dev/null 2>&1
+
+LC_ALL=C LANG=C ${apppath}/${appfile} > /dev/null 2>&1

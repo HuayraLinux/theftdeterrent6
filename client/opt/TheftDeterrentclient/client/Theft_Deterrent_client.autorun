@@ -1,0 +1,99 @@
+#!/bin/bash
+
+startup_dir=.config/autostart
+desktop_file=theftdeterrentclient.desktop
+apppath=/opt/TheftDeterrentclient/client
+appfile=TheftDeterrentclient
+extension_dir=TheftDeterrent_client_Extension
+
+print_verbose_log=$1
+ishidden=$2
+cur_process=$$
+
+if [ "x${print_verbose_log}" = "x-v" ] ; then
+    ui_log_file=/tmp/TDClientUI_${cur_process}.log
+else
+    #ui_log_file=/tmp/TDClientUI_${cur_process}.log
+    ui_log_file=/dev/null
+fi
+
+hideflag="--hide"
+if [ "x${ishidden}" = "xshow" ] ; then
+    hideflag=""
+elif [ "x${ishidden}" = "xhide" ] ; then
+    hideflag="--hide"
+fi
+
+fn_execute()
+{
+    #chmod +x ${apppath}/${appfile} > /dev/null 2>&1
+
+    tmp_str=`dirname  "$0"`
+    if [ "${tmp_str:0:1}" = "." ]; then
+        run_top_dir=`pwd`${tmp_str:1}
+    else
+        if [ "${tmp_str:0:1}" = "/" ]; then
+            run_top_dir=${tmp_str}
+        else
+            run_top_dir=`pwd`/${tmp_str}
+        fi
+    fi
+
+    echo immodules.cache=${run_top_dir}/gtk-2.0/immodules.cache >> ${ui_log_file} 2>&1
+#xun+,why,please see "3rd-lib.build/src_orig/ReadMe_3rd-lib.txt,2018.02.18
+    export GTK_IM_MODULE_FILE=${run_top_dir}/gtk-2.0/immodules.cache
+#xun+,why,please see "3rd-lib.build/src_orig/ReadMe_3rd-lib.txt,2018.02.18,end
+    echo "run"  >> ${ui_log_file} 2>&1
+    date  >> ${ui_log_file} 2>&1
+    LC_ALL=C LANG=C ${apppath}/${appfile} ${hideflag} >> ${ui_log_file} 2>&1
+    date  >> ${ui_log_file} 2>&1
+    echo end  >> ${ui_log_file} 2>&1
+}
+
+fn_register()
+{
+    home_folder=$(eval echo ~${SUDO_USER})
+    if [ ! -f "${home_folder}/${startup_dir}/${desktop_file}" ]; then
+        echo "${home_folder}/${startup_dir}/${desktop_file} not fount,creat it" >> ${ui_log_file} 2>&1
+        mkdir -p ${home_folder}/${startup_dir} >> ${ui_log_file} 2>&1
+        ln -s ${apppath}/${desktop_file} ${home_folder}/${startup_dir}/${desktop_file} > /dev/null 2>&1
+    else
+        echo "${home_folder}/${startup_dir}/${desktop_file} is OK" >> ${ui_log_file} 2>&1
+    fi
+
+    gnome-shell --version >> ${ui_log_file} 2>&1
+    gnome_shell_err=$?
+    echo gnome_shell_err=${gnome_shell_err} >> ${ui_log_file} 2>&1
+    if [ ${gnome_shell_err} -eq 0 ]; then
+        # Register extension
+        _existext_str=`LANG=C gsettings get org.gnome.shell enabled-extensions`
+        echo _existext_str=-${_existext_str}-  >> ${ui_log_file} 2>&1
+        _existext=`echo ${_existext_str} | grep -w "${extension_dir}"`
+        _null__existext=`echo ${_existext_str}  | grep -w "\[\]"`
+        echo _null__existext=${_null__existext}  >> ${ui_log_file} 2>&1
+        if [ "x${_existext_str}" = "x" ] ; then
+        	_existext="['${extension_dir}']"
+	    else
+           	if [ "x${_null__existext}" = "x" ] ; then    
+                if [ "x${_existext}" = "x" ] ; then    
+                    tmp_r=${_existext_str%%"]"}
+                    echo "_existext_str=-${_existext_str}-"  >> ${ui_log_file} 2>&1
+                    echo "tmp_r=-${tmp_r}-"  >> ${ui_log_file} 2>&1
+	           	    _existext="${tmp_r}, '${extension_dir}']"
+                fi
+	        else
+                _existext="['${extension_dir}']"
+          	fi
+        fi
+        echo "_existext=-${_existext}-"  >> ${ui_log_file} 2>&1
+        LANG=C nohup gsettings set org.gnome.shell enabled-extensions "${_existext}" > /dev/null 2>&1 &
+    else #if [ ${gnome_shell_err} -eq 0 ]
+        echo "gnome-shell not found"  >> ${ui_log_file} 2>&1
+    fi #if [ ${gnome_shell_err} -eq 0 ]
+
+    # Ubuntu support
+    #LANG=C nohup gsettings set com.canonical.Unity.Panel systray-whitelist "['all']" > /dev/null 2>&1 &
+}
+
+fn_register
+fn_execute
