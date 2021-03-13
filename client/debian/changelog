@@ -1,3 +1,9 @@
+theftdeterrent (6.0.0.11.huayra7) unstable; urgency=medium
+
+  * dependencias de los otros paquetes
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 13 Mar 2021 15:38:56 -0300
+
 theftdeterrent (6.0.0.11.huayra6) unstable; urgency=medium
 
   * sacando prerm 
