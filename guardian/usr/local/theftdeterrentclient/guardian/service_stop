@@ -1,7 +1,7 @@
 #! /bin/sh
 
-export curdir=/var/lib/dpkg/info
-export predir="theftdeterrentguardian."
+export curdir="/usr/share/theftdeterrentguardian"
+export predir=""
 
 . ${curdir}/${predir}funcdefine
 

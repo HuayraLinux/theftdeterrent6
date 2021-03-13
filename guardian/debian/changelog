@@ -1,3 +1,15 @@
+theftdeterrentguardian (6.0.0.11.huayra4) unstable; urgency=medium
+
+  * sacando prerm 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 13 Mar 2021 13:44:53 -0300
+
+theftdeterrentguardian (6.0.0.11.huayra3) unstable; urgency=medium
+
+  * fix paths de scripts 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 13 Mar 2021 13:34:57 -0300
+
 theftdeterrentguardian (6.0.0.11.huayra2) unstable; urgency=medium
 
   * fix preinst 
