@@ -1,6 +1,5 @@
 opt/	/
-usr/share/	usr/
-usr/local/ opt/TheftDeterrentclient/
+usr/    /
 
 debian/func* /usr/share/theftdeterrentclient/
 debian/LANG* /usr/share/theftdeterrentclient/

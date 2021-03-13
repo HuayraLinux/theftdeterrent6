@@ -21,3 +21,6 @@ export DH_OPTIONS
 
 override_dh_strip:
 	echo "Skip strip"
+
+override_dh_usrlocal:
+	echo "Skip usrlocal"
