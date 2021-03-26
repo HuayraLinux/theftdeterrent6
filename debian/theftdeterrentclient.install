@@ -1,0 +1,5 @@
+client/opt/TheftDeterrentclient/client	/opt/TheftDeterrentclient/
+client/usr/    /
+client/lib/ /
+debian/theftdeterrentclient.LANG* /usr/share/theftdeterrentclient/
+debian/theftdeterrentclient.func* /usr/share/theftdeterrentclient/

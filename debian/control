@@ -1,0 +1,48 @@
+Source: theftdeterrent
+Section: non-free/utils
+Priority: extra
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.6
+
+Package: theftdeterrentclient
+Depends:  ${shlibs:Depends}, ${misc:Depends}, 
+    theftdeterrentclient-lib (>= 6.0.0.11),
+    theftdeterrentdaemon (>= 6.0.0.11),
+    theftdeterrentguardian (>= 6.0.0.11),
+Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6.0.0.11.huayra7)
+Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6.0.0.11.huayra7)
+Priority: extra
+Section: non-free/utils
+Architecture: amd64
+Description: Intel Education Theft Deterrent client Huayra package
+ Paquete cliente de TheftDeterrent version 6
+
+Package: theftdeterrentdaemon
+Depends:  ${shlibs:Depends}, ${misc:Depends}, theftdeterrentclient-lib (>= 6)
+Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6.0.0.11.huayra7)
+Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6.0.0.11.huayra7)
+Section: non-free/utils
+Architecture: amd64
+Description: Intel Education Theft Deterrent client Huayra package
+ Paquete daemon de TheftDeterrent version 6
+
+Package: theftdeterrentclient-lib
+Depends:  ${shlibs:Depends}, ${misc:Depends}
+Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentclient (<= 6.0.0.11.huayra7), theftdeterrentclient-lib (<= 6.0.0.11.huayra5)
+Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentclient (<= 6.0.0.11.huayra7), theftdeterrentclient-lib (<= 6.0.0.11.huayra5)
+Priority: extra
+Section: non-free/utils
+Architecture: amd64
+Description: Theft Deterrent Plus client library Huayra package
+ Paquete con las librerias de TheftDeterrent v6
+
+Package: theftdeterrentguardian
+Pre-depends:python(>=2.6)
+Depends:  ${shlibs:Depends}, ${misc:Depends}
+Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrenguardian (<= 6.0.0.11.huayra4)
+Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentguardian (<= 6.0.0.11.huayra4)
+Section: non-free/utils
+Architecture: amd64
+Description: Theft Deterrent Plus guardian Huayra package
+ Paquete guardian de TheftDeterrent version 6

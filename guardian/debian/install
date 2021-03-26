@@ -1,8 +1,0 @@
-usr/	/
-lib/	/
-opt/	/
-
-debian/func* /usr/share/theftdeterrentguardian/
-debian/LANG* /usr/share/theftdeterrentguardian/
-
-

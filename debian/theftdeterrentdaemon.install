@@ -1,0 +1,4 @@
+daemon/usr/	/
+daemon/lib/	/
+
+debian/theftdeterrentdaemon.func* /usr/share/theftdeterrentclient/

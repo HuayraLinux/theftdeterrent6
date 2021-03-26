@@ -1,0 +1,9 @@
+guardian/usr/	/
+guardian/lib/	/
+guardian/opt/TheftDeterrentclient/guardian	/opt/TheftDeterrentclient/
+
+debian/theftdeterrentguardian.LANG* /usr/share/theftdeterrentclient/
+debian/theftdeterrentguardian.func* /usr/share/theftdeterrentclient/
+
+
+

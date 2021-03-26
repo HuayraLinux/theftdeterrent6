@@ -1,6 +1,6 @@
 #! /bin/sh
 
-export curdir="/usr/shar/theftdeterrentguardian"
+export curdir="/usr/local/theftdeterrentclient/guardian"
 export predir=""
 
 . ${curdir}/${predir}funcdefine

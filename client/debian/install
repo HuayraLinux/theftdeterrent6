@@ -1,7 +1,0 @@
-opt/	/
-usr/    /
-
-debian/func* /usr/share/theftdeterrentclient/
-debian/LANG* /usr/share/theftdeterrentclient/
-
-lib/ /
