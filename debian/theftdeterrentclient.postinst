@@ -33,6 +33,10 @@ fn_agentuipreinst
 
 fn_agentrebootreq
 
+mkdir -p /opt/TheftDeterrentclient/
+echo "es-MX" > /opt/TheftDeterrentclient/.tdcinstlang
+chmod 777 /opt/TheftDeterrentclient/.tdcinstlang
+
 fn_returncode 0
 
 exit 0
