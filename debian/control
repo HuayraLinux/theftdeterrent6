@@ -2,14 +2,14 @@ Source: theftdeterrent
 Section: non-free/utils
 Priority: extra
 Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
-Build-Depends: debhelper (>= 9.0.0)
+Build-Depends: debhelper (>= 13.0.0)
 Standards-Version: 3.9.6
 
 Package: theftdeterrentclient
 Depends:  ${shlibs:Depends}, ${misc:Depends}, 
-    theftdeterrentclient-lib (>= 6.0.0.11),
-    theftdeterrentdaemon (>= 6.0.0.11),
-    theftdeterrentguardian (>= 6.0.0.11),
+    theftdeterrentclient-lib (>= 6.0.0.12),
+    theftdeterrentdaemon (>= 6.0.0.12),
+    theftdeterrentguardian (>= 6.0.0.12),
 Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6.0.0.11.huayra7)
 Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentclient (<= 6.0.0.11.huayra7)
 Priority: extra
@@ -38,7 +38,7 @@ Description: Theft Deterrent Plus client library Huayra package
  Paquete con las librerias de TheftDeterrent v6
 
 Package: theftdeterrentguardian
-Pre-depends:python(>=2.6)
+Pre-depends:python(>=3.0)
 Depends:  ${shlibs:Depends}, ${misc:Depends}
 Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrenguardian (<= 6.0.0.11.huayra4)
 Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentguardian (<= 6.0.0.11.huayra4)
