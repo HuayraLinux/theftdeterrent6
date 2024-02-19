@@ -38,7 +38,7 @@ Description: Theft Deterrent Plus client library Huayra package
  Paquete con las librerias de TheftDeterrent v6
 
 Package: theftdeterrentguardian
-Pre-depends:python(>=3.0)
+Pre-depends:python3(>=3.0)
 Depends:  ${shlibs:Depends}, ${misc:Depends}
 Conflicts: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrenguardian (<= 6.0.0.11.huayra4)
 Replaces: huayra-tpm (<= 2.0.0.117), theftdeterrentdaemon (<= 6.0.0.11.huayra5), theftdeterrent4 (<= 6), theftdeterrentguardian (<= 6.0.0.11.huayra4)
