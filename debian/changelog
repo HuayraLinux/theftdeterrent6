@@ -1,3 +1,10 @@
+theftdeterrent (6.0.0.12.huayra1) torbellino; urgency=medium
+
+  * actualizacion a v6.0.0.12
+  * dependencia de python3
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Mon, 19 Feb 2024 14:12:14 -0300
+
 theftdeterrent (6.0.0.11.huayra10) unstable; urgency=medium
 
   * Desactivar el random de la mac address de las red
