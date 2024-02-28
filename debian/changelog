@@ -1,3 +1,9 @@
+theftdeterrent (6.0.0.12.huayra3) unstable; urgency=medium
+
+  * update libs
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 28 Feb 2024 12:37:45 -0300
+
 theftdeterrent (6.0.0.12.huayra2) unstable; urgency=medium
 
   * el paquete de python 3 es python3 !
