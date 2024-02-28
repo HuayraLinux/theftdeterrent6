@@ -1,0 +1,150 @@
+Notas sobre el source de este paquete
+=====================================
+
+El paquete tehftdeterrentclient-libs tiene unas liberias binarias que van en
+el directorio /opt/TheftDeterrent/client
+
+En el source hay un lib.tar.gz que se descomprime al momento de instalar el
+paquete.
+
+Este tar.gz debe ser generado con un nivel de directorio ya que luego se
+descomprime con strip-components 1 y todos los archivos quedan el path destino 
+(sin el directorio "TheftDeterrentclient")
+
+el contenido actual es siguiente:
+
+$ tree .
+.
+└── TheftDeterrentclient
+    ├── atk.so
+    ├── bz2.so
+    ├── cairo._cairo.so
+    ├── _codecs_cn.so
+    ├── _codecs_hk.so
+    ├── _codecs_iso2022.so
+    ├── _codecs_jp.so
+    ├── _codecs_kr.so
+    ├── _codecs_tw.so
+    ├── _ctypes.so
+    ├── _dbus_bindings.so
+    ├── _dbus_glib_bindings.so
+    ├── gdk-pixbuf-2.0
+    │   └── loaders.cache
+    ├── gio._gio.so
+    ├── gio.unix.so
+    ├── glib._glib.so
+    ├── gobject._gobject.so
+    ├── gtk-2.0
+    │   └── immodules.cache
+    ├── gtk.glade.so
+    ├── gtk._gtk.so
+    ├── _hashlib.so
+    ├── im-fcitx.so
+    ├── im-ibus.so
+    ├── libatk-1.0.so.0
+    ├── libbz2.so.1.0
+    ├── libcairo.so.2
+    ├── libcrypto.so.1.0.0
+    ├── libdatrie.so.1
+    ├── libdbus-1.so.3
+    ├── libdbus-glib-1.so.2
+    ├── libexpat.so.1
+    ├── libfcitx-gclient.so.0
+    ├── libfcitx-utils.so.0
+    ├── libffi.so.6
+    ├── libfontconfig.so.1
+    ├── libfreetype.so.6
+    ├── libgcc_s.so.1
+    ├── libgcrypt.so.20
+    ├── libgdk_pixbuf-2.0.so.0
+    ├── libgdk-x11-2.0.so.0
+    ├── libgio-2.0.so.0
+    ├── libglade-2.0.so.0
+    ├── libglib-2.0.so.0
+    ├── libgmodule-2.0.so.0
+    ├── libgobject-2.0.so.0
+    ├── libgpg-error.so.0
+    ├── libgraphite2.so.3
+    ├── libgthread-2.0.so.0
+    ├── libgtk-x11-2.0.so.0
+    ├── libharfbuzz.so.0
+    ├── libibus-1.0.so.5
+    ├── libICE.so.6
+    ├── libicudata.so.55
+    ├── libicuuc.so.55
+    ├── libjbig.so.0
+    ├── libjpeg.so.8
+    ├── liblzma.so.5
+    ├── libnotify.so.4
+    ├── libpango-1.0.so.0
+    ├── libpangocairo-1.0.so.0
+    ├── libpangoft2-1.0.so.0
+    ├── libpcre.so.3
+    ├── libpixbufloader-bmp.so
+    ├── libpixbufloader-gif.so
+    ├── libpixbufloader-png.so
+    ├── libpixman-1.so.0
+    ├── libpng12.so.0
+    ├── libpyglib-2.0-python2.7.so.0
+    ├── libpython2.7.so.1.0
+    ├── libreadline.so.6
+    ├── libselinux.so.1
+    ├── libSM.so.6
+    ├── libssl.so.1.0.0
+    ├── libstdc++.so.6
+    ├── libsystemd.so.0
+    ├── libthai.so.0
+    ├── libtiff.so.5
+    ├── libtinfo.so.5
+    ├── libuuid.so.1
+    ├── libwx_baseu-3.0.so.0
+    ├── libwx_baseu_net-3.0.so.0
+    ├── libwx_gtk2u_adv-3.0.so.0
+    ├── libwx_gtk2u_core-3.0.so.0
+    ├── libwx_gtk2u_html-3.0.so.0
+    ├── libX11.so.6
+    ├── libXau.so.6
+    ├── libxcb-render.so.0
+    ├── libxcb-shm.so.0
+    ├── libxcb.so.1
+    ├── libXcomposite.so.1
+    ├── libXcursor.so.1
+    ├── libXdamage.so.1
+    ├── libXdmcp.so.6
+    ├── libXext.so.6
+    ├── libXfixes.so.3
+    ├── libXinerama.so.1
+    ├── libXi.so.6
+    ├── libxkbcommon.so.0
+    ├── libxml2.so.2
+    ├── libXrandr.so.2
+    ├── libXrender.so.1
+    ├── libXxf86vm.so.1
+    ├── libz.so.1
+    ├── _multibytecodec.so
+    ├── out00-PYZ.pyz
+    ├── pangocairo.so
+    ├── pango.so
+    ├── psutil._psutil_linux.so
+    ├── psutil._psutil_posix.so
+    ├── pyexpat.so
+    ├── pyiboot01_bootstrap
+    ├── pyimod01_os_path
+    ├── pyimod02_archive
+    ├── pyimod03_importers
+    ├── pynotify._pynotify.so
+    ├── readline.so
+    ├── resource.so
+    ├── _ssl.so
+    ├── struct
+    ├── termios.so
+    ├── thrift.protocol.fastbinary.so
+    ├── wx._animate.so
+    ├── wx._controls_.so
+    ├── wx._core_.so
+    ├── wx._gdi_.so
+    ├── wx._misc_.so
+    └── wx._windows_.so
+
+4 directories, 127 files
+
